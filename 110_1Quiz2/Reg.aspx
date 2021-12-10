@@ -10,10 +10,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:TextBox ID="tb_CTEL" runat="server"></asp:TextBox>
-            <asp:RegularExpressionValidator ID="rev_CTEL" runat="server" ErrorMessage="不符合格式" ControlToValidate="tb_CTEL" ValidationExpression="^09\{2}d-\d{3}-\d{3}$" ForeColor="Maroon"></asp:RegularExpressionValidator><br />
-            <asp:Button ID="btn_Submit" runat="server" Text="送出" OnClientClick="btn_Submit_Click" /><br />
-            <asp:Label ID="lb_Msg" runat="server" Text=""></asp:Label>
+              <asp:TextBox ID="tb_CTEL" runat="server"></asp:TextBox>
+              <asp:RegularExpressionValidator ID="REV" runat="server" ErrorMessage="不符合格式"
+              ControlToValidate="tb_CTEL" ValidationExpression="^\d{4}[-/]\d{2}[-/]\d{2}$" 
+              ForeColor="Maroon"></asp:RegularExpressionValidator><br />
+              <asp:Button ID="btn_Submit" runat="server" Text="送出" />
+              <asp:Label ID="lb_Msg" runat="server" Text=""></asp:Label>
         </div>
     </form>
 </body>
